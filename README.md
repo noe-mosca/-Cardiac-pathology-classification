@@ -23,7 +23,7 @@ The task is to classify patients into one of five cardiac conditions:
 
 ---
 
-## 🗂 Dataset
+##  Dataset
 
 - **Training set:** 100 patients with 4 `.nii` images each and labeled pathology
 - **Test set:** 50 patients with identical image formats but **no labels**
@@ -33,7 +33,7 @@ Additional data:
 
 ---
 
-## ⚙ Feature Engineering
+##  Feature Engineering
 
 23 features were extracted from the segmented images, inspired by clinical biomarkers from peer-reviewed literature (PubMed, Springer). Examples include:
 - Left/right ventricular volumes at ED and ES
