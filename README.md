@@ -2,7 +2,7 @@
 
 This project aims to classify five types of cardiac pathologies based on cardiac MRI data using an ensemble of machine learning models.
 
-## 🧠 Objective
+##  Objective
 
 Develop a machine learning pipeline to predict cardiac pathologies using MRI data from two phases:
 - End-Diastole (ED)
@@ -23,7 +23,7 @@ The task is to classify patients into one of five cardiac conditions:
 
 ---
 
-## 🗂️ Dataset
+## 🗂 Dataset
 
 - **Training set:** 100 patients with 4 `.nii` images each and labeled pathology
 - **Test set:** 50 patients with identical image formats but **no labels**
@@ -33,7 +33,7 @@ Additional data:
 
 ---
 
-## ⚙️ Feature Engineering
+## ⚙ Feature Engineering
 
 23 features were extracted from the segmented images, inspired by clinical biomarkers from peer-reviewed literature (PubMed, Springer). Examples include:
 - Left/right ventricular volumes at ED and ES
@@ -44,13 +44,13 @@ Additional data:
 
 ---
 
-## 🧪 Model Pipeline
+##  Model Pipeline
 
-### 🔁 Data Augmentation (optional)
+###  Data Augmentation (optional)
 - Random rotations, flips, translations, and scaling were applied to artificially expand the dataset.
 - However, augmentation led to **performance degradation** and was eventually discarded for the final model.
 
-### 🏗️ Base Models
+###  Base Models
 Several base classifiers were tested and evaluated via cross-validation:
 - **Multi-layer Perceptrons (MLP)** trained in ensemble (50 instances)
 - **Random Forest**
@@ -58,7 +58,7 @@ Several base classifiers were tested and evaluated via cross-validation:
 - **XGBoost**
 - **K-Nearest Neighbors (KNN)**
 
-### 🧩 Ensemble Learning
+###  Ensemble Learning
 Two main combinations were retained:
 - `MLP + Random Forest`
 - `MLP + SVM`
@@ -70,7 +70,7 @@ Best results were obtained when both models contributed equally or slightly favo
 
 ---
 
-## 📈 Results
+##  Results
 
 - **Best validation accuracy:** ~96%
 - **Best models:** MLP + SVM and MLP + Random Forest
@@ -78,13 +78,13 @@ Best results were obtained when both models contributed equally or slightly favo
 
 ---
 
-## 🧩 Post-processing (Planned)
+##  Post-processing (Planned)
 
 A **KNN-based refinement** was proposed to improve classification between similar classes (e.g., label 1 and 2), but was not implemented in the current pipeline.
 
 ---
 
-## 🛠️ Tools & Libraries
+##  Tools & Libraries
 
 - `numpy`, `pandas`, `scikit-learn`
 - `PyTorch` for deep learning (MLP)
@@ -94,6 +94,6 @@ A **KNN-based refinement** was proposed to improve classification between simila
 
 ---
 
-## 🧑‍🔬 Author
+##  Author
 
 Project by **Noé Mosca** — developed as part of the IMA05 course final project.
