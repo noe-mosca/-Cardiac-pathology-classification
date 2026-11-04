@@ -1,0 +1,29 @@
+{
+  "status": "ok",
+  "seconds": 4.8,
+  "train": 100,
+  "test": 50,
+  "train_class_counts": {
+    "NOR": 20,
+    "MINF": 20,
+    "DCM": 20,
+    "HCM": 20,
+    "ARV": 20
+  },
+  "test_files_with_lv_on_disk": 100,
+  "test_dtypes": [
+    "float64"
+  ],
+  "train_files_without_lv": 0,
+  "non_integer_label_files": 0,
+  "spacing_z_values": [
+    5.0,
+    6.5,
+    7.0,
+    10.0
+  ],
+  "slices_range": [
+    6,
+    21
+  ]
+}

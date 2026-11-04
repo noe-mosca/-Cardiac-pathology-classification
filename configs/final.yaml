@@ -1,0 +1,13 @@
+# Final model, used by scripts/06_final_model.py.
+# Chosen from results/benchmark: best nested-CV accuracy (0.966 ± 0.011). MLP ensemble + linear
+# SVM with the wall-thickness features; the mixing weight alpha is chosen by inner CV.
+# A linear SVM on the same features is ~1 point lower (within noise) and is the simpler alternative:
+#   model: {model: svm_linear, grid: {C: [0.01, 0.1, 1, 10, 100]}}
+# LV: same reconstruction for training and test patients (results/lv_protocol: no measurable
+# difference with training on the ground-truth LV).
+name: final_model
+feature_set: "volumetric+thickness"
+lv: fill_hull
+seed: 0
+n_repeats: 10
+model: {model: soft_vote, params: {first: {model: mlp_ensemble}, second: {model: svm_linear, params: {C: 1}}}}

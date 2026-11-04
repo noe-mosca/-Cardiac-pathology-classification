@@ -1,0 +1,3 @@
+00:55:16 INFO dataset: run 20261102-005514_dataset -> /Users/noe/Desktop/Télécom/Cours/2A/IMA/IM05/IM05 Mosca Noé/final/runs/20261102-005514_dataset
+00:55:19 INFO dataset: 100 train / 50 test patients
+00:55:19 INFO dataset: test segmentation files containing an LV label (ignored on load): 100 / 100

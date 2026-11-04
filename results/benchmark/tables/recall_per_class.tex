@@ -1,0 +1,36 @@
+\begin{tabular}{llllllll}
+\toprule
+protocol & features & model & recall\_NOR & recall\_MINF & recall\_DCM & recall\_HCM & recall\_ARV \\
+\midrule
+fill\_hull->fill\_hull & volumetric & logreg & 0.915 ± 0.053 & 0.905 ± 0.028 & 0.865 ± 0.041 & 0.895 ± 0.044 & 0.900 ± 0.024 \\
+fill\_hull->fill\_hull & volumetric & svm\_linear & 1.000 ± 0.000 & 0.945 ± 0.016 & 0.865 ± 0.047 & 0.870 ± 0.026 & 0.945 ± 0.044 \\
+fill\_hull->fill\_hull & volumetric & svm\_rbf & 0.940 ± 0.057 & 0.940 ± 0.021 & 0.910 ± 0.032 & 0.905 ± 0.044 & 0.920 ± 0.048 \\
+fill\_hull->fill\_hull & volumetric & knn & 1.000 ± 0.000 & 0.915 ± 0.034 & 0.895 ± 0.044 & 0.870 ± 0.035 & 0.795 ± 0.044 \\
+fill\_hull->fill\_hull & volumetric & rf & 0.970 ± 0.026 & 0.880 ± 0.042 & 0.885 ± 0.034 & 0.940 ± 0.021 & 0.940 ± 0.021 \\
+fill\_hull->fill\_hull & volumetric & extra\_trees & 0.995 ± 0.016 & 0.920 ± 0.026 & 0.905 ± 0.044 & 0.925 ± 0.026 & 0.910 ± 0.046 \\
+fill\_hull->fill\_hull & volumetric & xgboost & 0.965 ± 0.034 & 0.875 ± 0.042 & 0.905 ± 0.050 & 0.945 ± 0.016 & 0.910 ± 0.039 \\
+fill\_hull->fill\_hull & volumetric & mlp\_ensemble & 0.975 ± 0.026 & 0.940 ± 0.021 & 0.885 ± 0.034 & 0.895 ± 0.037 & 0.905 ± 0.044 \\
+fill\_hull->fill\_hull & volumetric & mlp+rf & 1.000 ± 0.000 & 0.925 ± 0.026 & 0.875 ± 0.035 & 0.910 ± 0.032 & 0.915 ± 0.034 \\
+fill\_hull->fill\_hull & volumetric & mlp+svm & 0.995 ± 0.016 & 0.940 ± 0.021 & 0.880 ± 0.035 & 0.910 ± 0.039 & 0.910 ± 0.039 \\
+fill\_hull->fill\_hull & volumetric+thickness & logreg & 0.995 ± 0.016 & 0.955 ± 0.028 & 0.950 ± 0.000 & 0.935 ± 0.024 & 0.930 ± 0.048 \\
+fill\_hull->fill\_hull & volumetric+thickness & svm\_linear & 0.975 ± 0.035 & 0.955 ± 0.016 & 0.930 ± 0.026 & 0.975 ± 0.026 & 0.945 ± 0.037 \\
+fill\_hull->fill\_hull & volumetric+thickness & svm\_rbf & 0.950 ± 0.033 & 0.945 ± 0.016 & 0.925 ± 0.042 & 0.970 ± 0.026 & 0.935 ± 0.034 \\
+fill\_hull->fill\_hull & volumetric+thickness & knn & 0.980 ± 0.026 & 0.915 ± 0.034 & 0.900 ± 0.047 & 0.920 ± 0.026 & 0.795 ± 0.050 \\
+fill\_hull->fill\_hull & volumetric+thickness & rf & 1.000 ± 0.000 & 0.900 ± 0.041 & 0.915 ± 0.047 & 0.950 ± 0.000 & 0.925 ± 0.026 \\
+fill\_hull->fill\_hull & volumetric+thickness & extra\_trees & 0.990 ± 0.021 & 0.915 ± 0.034 & 0.935 ± 0.024 & 0.950 ± 0.000 & 0.895 ± 0.037 \\
+fill\_hull->fill\_hull & volumetric+thickness & xgboost & 0.990 ± 0.021 & 0.860 ± 0.052 & 0.910 ± 0.066 & 0.935 ± 0.047 & 0.885 ± 0.041 \\
+fill\_hull->fill\_hull & volumetric+thickness & mlp\_ensemble & 0.995 ± 0.016 & 0.955 ± 0.016 & 0.930 ± 0.026 & 0.955 ± 0.016 & 0.950 ± 0.024 \\
+fill\_hull->fill\_hull & volumetric+thickness & mlp+rf & 1.000 ± 0.000 & 0.955 ± 0.016 & 0.925 ± 0.026 & 0.955 ± 0.016 & 0.935 ± 0.034 \\
+fill\_hull->fill\_hull & volumetric+thickness & mlp+svm & 0.985 ± 0.024 & 0.950 ± 0.000 & 0.945 ± 0.028 & 0.975 ± 0.026 & 0.975 ± 0.035 \\
+fill\_hull->fill\_hull & compact & logreg & 0.990 ± 0.021 & 0.885 ± 0.041 & 0.895 ± 0.064 & 1.000 ± 0.000 & 0.940 ± 0.032 \\
+fill\_hull->fill\_hull & compact & svm\_linear & 1.000 ± 0.000 & 0.905 ± 0.028 & 0.850 ± 0.058 & 0.950 ± 0.033 & 0.930 ± 0.035 \\
+fill\_hull->fill\_hull & compact & svm\_rbf & 0.995 ± 0.016 & 0.890 ± 0.032 & 0.905 ± 0.055 & 1.000 ± 0.000 & 0.930 ± 0.054 \\
+fill\_hull->fill\_hull & compact & knn & 0.995 ± 0.016 & 0.895 ± 0.037 & 0.975 ± 0.035 & 0.960 ± 0.021 & 0.835 ± 0.024 \\
+fill\_hull->fill\_hull & compact & rf & 1.000 ± 0.000 & 0.875 ± 0.026 & 0.880 ± 0.048 & 0.980 ± 0.048 & 0.890 ± 0.052 \\
+fill\_hull->fill\_hull & compact & extra\_trees & 0.995 ± 0.016 & 0.905 ± 0.028 & 0.940 ± 0.032 & 0.995 ± 0.016 & 0.865 ± 0.024 \\
+fill\_hull->fill\_hull & compact & xgboost & 0.985 ± 0.024 & 0.880 ± 0.035 & 0.880 ± 0.042 & 0.980 ± 0.048 & 0.850 ± 0.033 \\
+fill\_hull->fill\_hull & compact & mlp\_ensemble & 1.000 ± 0.000 & 0.900 ± 0.041 & 0.925 ± 0.054 & 0.995 ± 0.016 & 0.945 ± 0.028 \\
+fill\_hull->fill\_hull & compact & mlp+rf & 1.000 ± 0.000 & 0.900 ± 0.041 & 0.930 ± 0.048 & 0.985 ± 0.047 & 0.945 ± 0.044 \\
+fill\_hull->fill\_hull & compact & mlp+svm & 1.000 ± 0.000 & 0.905 ± 0.028 & 0.915 ± 0.047 & 0.985 ± 0.024 & 0.970 ± 0.026 \\
+\bottomrule
+\end{tabular}

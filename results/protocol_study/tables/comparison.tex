@@ -1,0 +1,13 @@
+\begin{tabular}{lrllll}
+\toprule
+model & single\_split & accuracy & balanced\_accuracy & macro\_f1 & chosen\_params \\
+\midrule
+rf & 0.940 & 0.930 ± 0.012 & 0.930 ± 0.012 & 0.930 ± 0.012 & max\_depth=None (25/25), max\_features=sqrt (25/25), n\_estimators=50 (10/25) \\
+xgboost & 0.910 & 0.910 ± 0.007 & 0.910 ± 0.007 & 0.911 ± 0.007 & colsample\_bytree=0.6 (25/25), learning\_rate=0.01 (18/25), max\_depth=3 (23/25), n\_estimators=50 (10/25) \\
+svm & 0.950 & 0.936 ± 0.009 & 0.936 ± 0.009 & 0.936 ± 0.009 & C=10.0 (11/25), gamma=scale (25/25), kernel=rbf (14/25) \\
+knn & 0.930 & 0.904 ± 0.021 & 0.904 ± 0.021 & 0.905 ± 0.021 & metric=manhattan (25/25), n\_neighbors=3 (19/25), weights=distance (14/25) \\
+mlp\_ensemble & 0.936 & 0.926 ± 0.011 & 0.926 ± 0.011 & 0.926 ± 0.012 &  \\
+mlp+rf & NaN & 0.926 ± 0.005 & 0.926 ± 0.005 & 0.926 ± 0.006 & alpha=0.3 (8/25) \\
+mlp+svm & NaN & 0.932 ± 0.008 & 0.932 ± 0.008 & 0.932 ± 0.008 & alpha=0.5 (9/25) \\
+\bottomrule
+\end{tabular}

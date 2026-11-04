@@ -1,0 +1,21 @@
+00:56:25 INFO protocol_study: run 20261102-005625_protocol_study -> /Users/noe/Desktop/Télécom/Cours/2A/IMA/IM05/IM05 Mosca Noé/final/runs/20261102-005625_protocol_study
+00:56:40 INFO protocol_study: single split rf       best of  30 configs = 0.940 (median 0.930)
+00:57:20 INFO protocol_study: single split xgboost  best of 135 configs = 0.910 (median 0.910)
+00:57:20 INFO protocol_study: single split svm      best of  12 configs = 0.950 (median 0.925)
+00:57:20 INFO protocol_study: single split knn      best of  16 configs = 0.930 (median 0.880)
+00:58:42 INFO protocol_study: single split mlp_ensemble over seeds: [0.93 0.94 0.94 0.94 0.93]
+00:59:08 INFO protocol_study: MLP accuracy on its training patients vs CV:
+ epochs  training_accuracy  cv_accuracy
+    100                1.0         0.93
+    200                1.0         0.92
+    500                1.0         0.93
+01:00:13 INFO protocol_study: MLP+rf: best alpha per MLP seed [0.0, 0.9, 0.2, 0.9, 0.8] (accuracy [0.93, 0.94, 0.94, 0.94, 0.94])
+01:00:13 INFO protocol_study: MLP+svm: best alpha per MLP seed [0.1, 0.4, 0.9, 0.5, 0.3] (accuracy [0.93, 0.94, 0.94, 0.94, 0.94])
+01:00:28 INFO protocol_study: feature selection (RF, 10 splits): {'all_features': '0.925 ± 0.010', 'top16_selected_on_all': '0.924 ± 0.012', 'top16_selected_in_folds': '0.923 ± 0.013'}
+01:02:30 INFO protocol_study: nested rf           accuracy = 0.930 ± 0.012   (single split 0.940)  max_depth=None (25/25), max_features=sqrt (25/25), n_estimators=50 (10/25)
+01:06:21 INFO protocol_study: nested xgboost      accuracy = 0.910 ± 0.007   (single split 0.910)  colsample_bytree=0.6 (25/25), learning_rate=0.01 (18/25), max_depth=3 (23/25), n_estimators=50 (10/25)
+01:06:22 INFO protocol_study: nested svm          accuracy = 0.936 ± 0.009   (single split 0.950)  C=10.0 (11/25), gamma=scale (25/25), kernel=rbf (14/25)
+01:06:23 INFO protocol_study: nested knn          accuracy = 0.904 ± 0.021   (single split 0.930)  metric=manhattan (25/25), n_neighbors=3 (19/25), weights=distance (14/25)
+01:06:44 INFO protocol_study: nested mlp_ensemble accuracy = 0.926 ± 0.011   (single split 0.936)  
+01:08:43 INFO protocol_study: nested mlp+rf       accuracy = 0.926 ± 0.005   (single split nan)  alpha=0.3 (8/25)
+01:10:43 INFO protocol_study: nested mlp+svm      accuracy = 0.932 ± 0.008   (single split nan)  alpha=0.5 (9/25)

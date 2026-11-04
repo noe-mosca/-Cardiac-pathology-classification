@@ -1,0 +1,9 @@
+run_id,name,status,seconds,command
+20261102-005514_dataset,dataset,ok,4.8,scripts/01_build_index.py
+20261102-005521_lv_reconstruction,lv_reconstruction,ok,18.7,scripts/02_lv_reconstruction.py
+20261102-005541_features,features,ok,41.6,scripts/03_extract_features.py
+20261102-005625_protocol_study,protocol_study,ok,859.0,scripts/04_protocol_study.py
+20261102-011050_benchmark,benchmark,ok,2926.9,scripts/05_benchmark.py --config benchmark.yaml
+20261102-015942_lv_protocol,lv_protocol,ok,1053.8,scripts/05_benchmark.py --config lv_protocol.yaml
+20261102-021718_final_model,final_model,ok,24401.5,scripts/06_final_model.py --config final.yaml
+20261104-151517_final_model,final_model,ok,412.9,scripts/06_final_model.py --config final.yaml

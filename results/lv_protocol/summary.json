@@ -1,0 +1,38 @@
+{
+  "status": "ok",
+  "seconds": 1053.8,
+  "best_per_protocol": [
+    {
+      "protocol": "fill->fill",
+      "features": "volumetric+thickness",
+      "model": "svm_linear",
+      "accuracy": 0.959,
+      "accuracy_std": 0.007378647873726225,
+      "balanced_accuracy": 0.959
+    },
+    {
+      "protocol": "fill_hull->fill_hull",
+      "features": "volumetric+thickness",
+      "model": "svm_linear",
+      "accuracy": 0.9560000000000001,
+      "accuracy_std": 0.014298407059684801,
+      "balanced_accuracy": 0.9560000000000001
+    },
+    {
+      "protocol": "gt->fill",
+      "features": "volumetric+thickness",
+      "model": "svm_linear",
+      "accuracy": 0.9560000000000001,
+      "accuracy_std": 0.012649110640673528,
+      "balanced_accuracy": 0.9560000000000001
+    },
+    {
+      "protocol": "gt->gt",
+      "features": "volumetric+thickness",
+      "model": "svm_linear",
+      "accuracy": 0.954,
+      "accuracy_std": 0.012649110640673528,
+      "balanced_accuracy": 0.9540000000000001
+    }
+  ]
+}

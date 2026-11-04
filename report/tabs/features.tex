@@ -1,0 +1,16 @@
+% Written by hand from final/cardiac/features.py (definitions in Appendix, tabs/supp/features_full.tex).
+\begin{tabular}{p{0.2\linewidth}rp{0.62\linewidth}}
+\toprule
+Group & Count & Features\\
+\midrule
+LV & 6 & ED and ES volumes, ejection fraction, stroke volume, ED and ES volumes / BSA\\
+RV & 5 & ED and ES volumes, ejection fraction, ED and ES volumes / BSA\\
+Myocardium & 5 & mass (mean of ED and ES), mass / BSA, ES / ED mass, ED mass / LV ED volume, mean mass / LV ED volume\\
+RV / LV & 2 & volume ratios at ED and at ES\\
+Patient & 3 & height, weight, body surface area (Mosteller)\\
+\midrule
+Wall thickness & 11 & at ED and at ES: mean, maximum, largest per-slice mean, mean of per-slice standard deviations, standard deviation of per-slice means; systolic thickening (ES / ED mean thickness)\\
+\bottomrule
+\end{tabular}
+\caption{Features. The first 21 are the \emph{volumetric} features. The \emph{compact} set keeps 12 of them: the 6 indexed volumes and ejection fractions, mass / BSA, the RV / LV volume ratio at ED, mean mass / LV ED volume, the largest per-slice mean and the mean per-slice standard deviation of the ED wall thickness, and the systolic thickening.}
+\label{tab:features}

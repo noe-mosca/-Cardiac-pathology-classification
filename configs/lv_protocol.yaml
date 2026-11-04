@@ -1,0 +1,19 @@
+# Effect of the LV used for training / evaluation (scripts/05_benchmark.py).
+#   gt -> gt               true LV everywhere (not possible on the test set)
+#   gt -> fill             trained on the true LV, applied to filled LVs (as on the test set)
+#   fill_hull -> fill_hull this version: same reconstruction for training and test patients
+name: lv_protocol
+seed: 0
+n_repeats: 10
+protocols:
+  - {fit: gt, eval: gt}
+  - {fit: gt, eval: fill}
+  - {fit: fill, eval: fill}
+  - {fit: fill_hull, eval: fill_hull}
+feature_sets: [volumetric, "volumetric+thickness"]
+models:
+  logreg: {model: logreg, grid: {C: [0.01, 0.1, 1, 10, 100]}}
+  svm_linear: {model: svm_linear, grid: {C: [0.01, 0.1, 1, 10, 100]}}
+  rf: {model: rf, params: {n_estimators: 300}, grid: {max_depth: [null, 5], max_features: [sqrt, 0.5]}}
+  xgboost: {model: xgboost, grid: {n_estimators: [100, 300], max_depth: [2, 3], learning_rate: [0.05, 0.1],
+                                   colsample_bytree: [0.6, 1.0]}}

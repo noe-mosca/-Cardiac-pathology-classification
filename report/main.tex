@@ -1,0 +1,54 @@
+% Project report in the ICLR 2025 conference format (official style files in this folder).
+\documentclass{article}
+\usepackage{iclr2025_conference,times}
+
+% Optional math commands from https://github.com/goodfeli/dlbook_notation.
+\input{math_commands.tex}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{adjustbox}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{placeins}
+\usepackage{titletoc}  % partial table of contents for the appendix
+
+\hypersetup{colorlinks=true, linkcolor=blue!50!black, citecolor=blue!50!black, urlcolor=blue!50!black}
+
+\title{Classifying Cardiac Pathologies \\ from MRI Segmentations, Revisited}
+
+\author{Noé Mosca \\
+Télécom Paris, Institut Polytechnique de Paris}
+
+\iclrfinalcopy % show the authors
+\begin{document}
+
+\maketitle
+% The style prints a conference banner in the header; this is a course project report.
+\lhead{IMA205 challenge report, Télécom Paris}
+
+\input{sec_merge/0_abstract}
+
+\input{sec_merge/1_intro}
+\input{sec_merge/2_related}
+\input{sec_merge/3_dataset}
+\input{sec_merge/4_method}
+\input{sec_merge/5_results}
+\input{sec_merge/6_discussion}
+\input{sec_merge/7_conclusion}
+
+\input{sec_merge/statements}
+
+\bibliography{references}
+\bibliographystyle{iclr2025_conference}
+
+\clearpage
+\appendix
+\input{sec_merge/8_appendix}
+
+\end{document}

@@ -1,0 +1,21 @@
+{
+  "name": "dataset",
+  "run_id": "20261102-005514_dataset",
+  "command": "scripts/01_build_index.py",
+  "started": "2026-11-02T00:55:14",
+  "versions": {
+    "python": "3.12.6",
+    "platform": "macOS-14.3-arm64-arm-64bit",
+    "numpy": "2.2.6",
+    "sklearn": "1.5.2",
+    "torch": "2.6.0",
+    "xgboost": "3.0.0",
+    "nibabel": "5.3.2",
+    "scipy": "1.14.1",
+    "skimage": "0.24.0",
+    "pandas": "2.2.3"
+  },
+  "config": {
+    "data_root": "/Users/noe/Desktop/Télécom/Cours/2A/IMA/IM05/IM05 Mosca Noé/final/data/acdc"
+  }
+}

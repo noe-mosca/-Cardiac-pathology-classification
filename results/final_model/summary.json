@@ -1,0 +1,28 @@
+{
+  "status": "ok",
+  "seconds": 412.9,
+  "nested_cv": {
+    "accuracy": 0.966,
+    "accuracy_std": 0.01074967699773141,
+    "balanced_accuracy": 0.9660000000000002,
+    "macro_f1": 0.9661012914501883
+  },
+  "final_params": {
+    "alpha": 0.5
+  },
+  "test_class_counts": {
+    "NOR": 12,
+    "MINF": 8,
+    "DCM": 11,
+    "HCM": 9,
+    "ARV": 10
+  },
+  "test_mean_confidence": 0.8106121098832739,
+  "top_features": [
+    "es_thick_slicestd_mean",
+    "lv_ef",
+    "rv_ef",
+    "stroke_volume",
+    "es_rv_vol"
+  ]
+}
