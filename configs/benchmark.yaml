@@ -1,0 +1,21 @@
+# Main comparison (scripts/05_benchmark.py): models x feature sets, nested CV.
+# Training and evaluated patients both use the reconstructed LV, like the test set.
+# grid = hyper-parameters selected by the inner 5-fold CV; params = fixed values.
+name: benchmark
+seed: 0
+n_repeats: 10
+protocols:
+  - {fit: fill_hull, eval: fill_hull}
+feature_sets: [volumetric, "volumetric+thickness", compact]
+models:
+  logreg: {model: logreg, grid: {C: [0.01, 0.1, 1, 10, 100]}}
+  svm_linear: {model: svm_linear, grid: {C: [0.01, 0.1, 1, 10, 100]}}
+  svm_rbf: {model: svm_rbf, grid: {C: [0.1, 1, 10, 100], gamma: [scale, 0.01, 0.1]}}
+  knn: {model: knn, grid: {n_neighbors: [3, 5, 7, 9], weights: [uniform, distance], metric: [euclidean, manhattan]}}
+  rf: {model: rf, params: {n_estimators: 300}, grid: {max_depth: [null, 5], max_features: [sqrt, 0.5]}}
+  extra_trees: {model: extra_trees, params: {n_estimators: 300}, grid: {max_depth: [null, 5], max_features: [sqrt, 0.5]}}
+  xgboost: {model: xgboost, grid: {n_estimators: [100, 300], max_depth: [2, 3], learning_rate: [0.05, 0.1],
+                                   colsample_bytree: [0.6, 1.0]}}
+  mlp_ensemble: {model: mlp_ensemble}
+  mlp+rf: {model: soft_vote, params: {first: {model: mlp_ensemble}, second: {model: rf, params: {n_estimators: 300}}}}
+  mlp+svm: {model: soft_vote, params: {first: {model: mlp_ensemble}, second: {model: svm_linear, params: {C: 1}}}}

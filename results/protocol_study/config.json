@@ -1,0 +1,151 @@
+{
+  "name": "protocol_study",
+  "run_id": "20261102-005625_protocol_study",
+  "command": "scripts/04_protocol_study.py",
+  "started": "2026-11-02T00:56:25",
+  "versions": {
+    "python": "3.12.6",
+    "platform": "macOS-14.3-arm64-arm-64bit",
+    "numpy": "2.2.6",
+    "sklearn": "1.5.2",
+    "torch": "2.6.0",
+    "xgboost": "3.0.0",
+    "nibabel": "5.3.2",
+    "scipy": "1.14.1",
+    "skimage": "0.24.0",
+    "pandas": "2.2.3"
+  },
+  "config": {
+    "name": "protocol_study",
+    "feature_set": "volumetric",
+    "seed": 42,
+    "n_repeats": 5,
+    "mlp_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "grids": {
+      "rf": {
+        "model": "rf",
+        "grid": {
+          "n_estimators": [
+            50,
+            100,
+            200,
+            300,
+            500
+          ],
+          "max_depth": [
+            null,
+            10,
+            20
+          ],
+          "max_features": [
+            "sqrt",
+            "log2"
+          ]
+        }
+      },
+      "xgboost": {
+        "model": "xgboost",
+        "grid": {
+          "n_estimators": [
+            50,
+            100,
+            200,
+            300,
+            500
+          ],
+          "max_depth": [
+            3,
+            6,
+            9
+          ],
+          "learning_rate": [
+            0.01,
+            0.1,
+            0.2
+          ],
+          "colsample_bytree": [
+            0.6,
+            0.8,
+            1.0
+          ]
+        }
+      },
+      "svm": {
+        "model": "svm",
+        "grid": {
+          "C": [
+            0.1,
+            1,
+            10
+          ],
+          "kernel": [
+            "linear",
+            "rbf"
+          ],
+          "gamma": [
+            "scale",
+            "auto"
+          ]
+        }
+      },
+      "knn": {
+        "model": "knn",
+        "grid": {
+          "n_neighbors": [
+            3,
+            5,
+            7,
+            9
+          ],
+          "weights": [
+            "uniform",
+            "distance"
+          ],
+          "metric": [
+            "euclidean",
+            "manhattan"
+          ]
+        }
+      },
+      "mlp_ensemble": {
+        "model": "mlp_ensemble"
+      },
+      "mlp+rf": {
+        "model": "soft_vote",
+        "params": {
+          "first": {
+            "model": "mlp_ensemble"
+          },
+          "second": {
+            "model": "rf",
+            "params": {
+              "n_estimators": 200
+            }
+          }
+        }
+      },
+      "mlp+svm": {
+        "model": "soft_vote",
+        "params": {
+          "first": {
+            "model": "mlp_ensemble"
+          },
+          "second": {
+            "model": "svm_linear",
+            "params": {
+              "C": 10
+            }
+          }
+        }
+      }
+    },
+    "top_k_features": 16,
+    "_config_file": "/Users/noe/Desktop/Télécom/Cours/2A/IMA/IM05/IM05 Mosca Noé/final/configs/protocol_study.yaml"
+  }
+}

@@ -1,0 +1,109 @@
+{
+  "name": "lv_protocol",
+  "run_id": "20261102-015942_lv_protocol",
+  "command": "scripts/05_benchmark.py --config lv_protocol.yaml",
+  "started": "2026-11-02T01:59:42",
+  "versions": {
+    "python": "3.12.6",
+    "platform": "macOS-14.3-arm64-arm-64bit",
+    "numpy": "2.2.6",
+    "sklearn": "1.5.2",
+    "torch": "2.6.0",
+    "xgboost": "3.0.0",
+    "nibabel": "5.3.2",
+    "scipy": "1.14.1",
+    "skimage": "0.24.0",
+    "pandas": "2.2.3"
+  },
+  "config": {
+    "name": "lv_protocol",
+    "seed": 0,
+    "n_repeats": 10,
+    "protocols": [
+      {
+        "fit": "gt",
+        "eval": "gt"
+      },
+      {
+        "fit": "gt",
+        "eval": "fill"
+      },
+      {
+        "fit": "fill",
+        "eval": "fill"
+      },
+      {
+        "fit": "fill_hull",
+        "eval": "fill_hull"
+      }
+    ],
+    "feature_sets": [
+      "volumetric",
+      "volumetric+thickness"
+    ],
+    "models": {
+      "logreg": {
+        "model": "logreg",
+        "grid": {
+          "C": [
+            0.01,
+            0.1,
+            1,
+            10,
+            100
+          ]
+        }
+      },
+      "svm_linear": {
+        "model": "svm_linear",
+        "grid": {
+          "C": [
+            0.01,
+            0.1,
+            1,
+            10,
+            100
+          ]
+        }
+      },
+      "rf": {
+        "model": "rf",
+        "params": {
+          "n_estimators": 300
+        },
+        "grid": {
+          "max_depth": [
+            null,
+            5
+          ],
+          "max_features": [
+            "sqrt",
+            0.5
+          ]
+        }
+      },
+      "xgboost": {
+        "model": "xgboost",
+        "grid": {
+          "n_estimators": [
+            100,
+            300
+          ],
+          "max_depth": [
+            2,
+            3
+          ],
+          "learning_rate": [
+            0.05,
+            0.1
+          ],
+          "colsample_bytree": [
+            0.6,
+            1.0
+          ]
+        }
+      }
+    },
+    "_config_file": "/Users/noe/Desktop/Télécom/Cours/2A/IMA/IM05/IM05 Mosca Noé/final/configs/lv_protocol.yaml"
+  }
+}

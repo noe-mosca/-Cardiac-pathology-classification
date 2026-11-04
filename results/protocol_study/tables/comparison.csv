@@ -1,0 +1,8 @@
+model,single_split,accuracy,balanced_accuracy,macro_f1,chosen_params
+rf,0.9399999999999998,0.930 ± 0.012,0.930 ± 0.012,0.930 ± 0.012,"max_depth=None (25/25), max_features=sqrt (25/25), n_estimators=50 (10/25)"
+xgboost,0.9099999999999999,0.910 ± 0.007,0.910 ± 0.007,0.911 ± 0.007,"colsample_bytree=0.6 (25/25), learning_rate=0.01 (18/25), max_depth=3 (23/25), n_estimators=50 (10/25)"
+svm,0.95,0.936 ± 0.009,0.936 ± 0.009,0.936 ± 0.009,"C=10.0 (11/25), gamma=scale (25/25), kernel=rbf (14/25)"
+knn,0.93,0.904 ± 0.021,0.904 ± 0.021,0.905 ± 0.021,"metric=manhattan (25/25), n_neighbors=3 (19/25), weights=distance (14/25)"
+mlp_ensemble,0.9359999999999999,0.926 ± 0.011,0.926 ± 0.011,0.926 ± 0.012,
+mlp+rf,,0.926 ± 0.005,0.926 ± 0.005,0.926 ± 0.006,alpha=0.3 (8/25)
+mlp+svm,,0.932 ± 0.008,0.932 ± 0.008,0.932 ± 0.008,alpha=0.5 (9/25)

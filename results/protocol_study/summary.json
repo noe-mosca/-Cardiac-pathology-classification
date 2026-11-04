@@ -1,0 +1,138 @@
+{
+  "status": "ok",
+  "seconds": 859.0,
+  "single_split_best": {
+    "rf": 0.9399999999999998,
+    "xgboost": 0.9099999999999999,
+    "svm": 0.95,
+    "knn": 0.93,
+    "mlp_ensemble": 0.9359999999999999
+  },
+  "mlp_single_split_by_seed": [
+    0.93,
+    0.9400000000000001,
+    0.9400000000000001,
+    0.9400000000000001,
+    0.93
+  ],
+  "mlp_training_vs_cv": [
+    {
+      "epochs": 100,
+      "training_accuracy": 1.0,
+      "cv_accuracy": 0.93
+    },
+    {
+      "epochs": 200,
+      "training_accuracy": 1.0,
+      "cv_accuracy": 0.9199999999999999
+    },
+    {
+      "epochs": 500,
+      "training_accuracy": 1.0,
+      "cv_accuracy": 0.93
+    }
+  ],
+  "alpha": {
+    "rf": {
+      "best_alpha_by_seed": [
+        0.0,
+        0.9,
+        0.2,
+        0.9,
+        0.8
+      ],
+      "best_accuracy_by_seed": [
+        0.93,
+        0.94,
+        0.94,
+        0.94,
+        0.94
+      ]
+    },
+    "svm": {
+      "best_alpha_by_seed": [
+        0.1,
+        0.4,
+        0.9,
+        0.5,
+        0.3
+      ],
+      "best_accuracy_by_seed": [
+        0.93,
+        0.94,
+        0.94,
+        0.94,
+        0.94
+      ]
+    }
+  },
+  "feature_selection": {
+    "all_features": {
+      "mean": 0.925,
+      "std": 0.009718253158075485
+    },
+    "top16_selected_on_all": {
+      "mean": 0.924,
+      "std": 0.011737877907772656
+    },
+    "top16_selected_in_folds": {
+      "mean": 0.9229999999999998,
+      "std": 0.013374935098492607
+    },
+    "selected_features": [
+      "lv_ef",
+      "es_lv_vol",
+      "es_lv_index",
+      "mass_to_edv_ratio",
+      "ratio_rv_lv_es",
+      "myocardium_to_lv_ed",
+      "ratio_rv_lv_ed",
+      "rv_ef",
+      "es_rv_index",
+      "lv_mass_index",
+      "ed_lv_vol",
+      "ed_lv_index",
+      "es_rv_vol",
+      "myocardium_mass",
+      "ed_rv_index",
+      "ed_rv_vol"
+    ]
+  },
+  "nested": [
+    {
+      "model": "rf",
+      "accuracy": 0.93,
+      "accuracy_std": 0.012247448713915856
+    },
+    {
+      "model": "xgboost",
+      "accuracy": 0.9099999999999999,
+      "accuracy_std": 0.007071067811865481
+    },
+    {
+      "model": "svm",
+      "accuracy": 0.9359999999999999,
+      "accuracy_std": 0.008944271909999111
+    },
+    {
+      "model": "knn",
+      "accuracy": 0.9040000000000001,
+      "accuracy_std": 0.02073644135332774
+    },
+    {
+      "model": "mlp_ensemble",
+      "accuracy": 0.9259999999999999,
+      "accuracy_std": 0.011401754250991356
+    },
+    {
+      "model": "mlp+rf",
+      "accuracy": 0.9259999999999999,
+      "accuracy_std": 0.0054772255750516665
+    },
+    {
+      "model": "mlp+svm",
+      "accuracy": 0.932,
+      "accuracy_std": 0.00836660026534071
+    }
+  ]
+}

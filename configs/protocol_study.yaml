@@ -1,0 +1,18 @@
+# Effect of the evaluation protocol (scripts/04_protocol_study.py), on the 21 volumetric features
+# with the true LV: every grid is scored on a single split (shuffle + StratifiedKFold, random_state=42,
+# scaler fitted on all patients) and by nested CV (selection inside the training folds).
+name: protocol_study
+feature_set: volumetric
+seed: 42
+n_repeats: 5          # outer repeats of the nested CV
+mlp_seeds: [0, 1, 2, 3, 4]
+grids:
+  rf: {model: rf, grid: {n_estimators: [50, 100, 200, 300, 500], max_depth: [null, 10, 20], max_features: [sqrt, log2]}}
+  xgboost: {model: xgboost, grid: {n_estimators: [50, 100, 200, 300, 500], max_depth: [3, 6, 9],
+                                   learning_rate: [0.01, 0.1, 0.2], colsample_bytree: [0.6, 0.8, 1.0]}}
+  svm: {model: svm, grid: {C: [0.1, 1, 10], kernel: [linear, rbf], gamma: [scale, auto]}}
+  knn: {model: knn, grid: {n_neighbors: [3, 5, 7, 9], weights: [uniform, distance], metric: [euclidean, manhattan]}}
+  mlp_ensemble: {model: mlp_ensemble}
+  mlp+rf: {model: soft_vote, params: {first: {model: mlp_ensemble}, second: {model: rf, params: {n_estimators: 200}}}}
+  mlp+svm: {model: soft_vote, params: {first: {model: mlp_ensemble}, second: {model: svm_linear, params: {C: 10}}}}
+top_k_features: 16    # features kept by random-forest importance

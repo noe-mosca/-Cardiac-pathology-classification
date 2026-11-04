@@ -1,0 +1,4 @@
+epochs,training_accuracy,cv_accuracy
+100,1.0,0.93
+200,1.0,0.9199999999999999
+500,1.0,0.93

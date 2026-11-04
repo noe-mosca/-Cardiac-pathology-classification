@@ -1,0 +1,10 @@
+00:55:42 INFO features: run 20261102-005541_features -> /Users/noe/Desktop/Télécom/Cours/2A/IMA/IM05/IM05 Mosca Noé/final/runs/20261102-005541_features
+00:55:50 INFO features: Train / gt: 100 patients x 33 features
+00:55:59 INFO features: Train / fill: 100 patients x 33 features
+00:56:10 INFO features: Train / fill_hull: 100 patients x 33 features
+00:56:15 INFO features: Test / fill: 50 patients x 32 features
+00:56:21 INFO features: Test / fill_hull: 50 patients x 32 features
+00:56:21 INFO features: train features vs ground-truth LV:
+lv_source  patients_changed  max_rel_change
+     fill                 7        0.984894
+fill_hull                 7        0.374931

@@ -1,0 +1,14 @@
+{
+  "status": "ok",
+  "seconds": 2926.9,
+  "best_per_protocol": [
+    {
+      "protocol": "fill_hull->fill_hull",
+      "features": "volumetric+thickness",
+      "model": "mlp+svm",
+      "accuracy": 0.966,
+      "accuracy_std": 0.01074967699773141,
+      "balanced_accuracy": 0.9660000000000002
+    }
+  ]
+}

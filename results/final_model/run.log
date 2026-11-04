@@ -1,0 +1,5 @@
+15:15:17 INFO final_model: run 20261104-151517_final_model -> /Users/noe/Desktop/Télécom/Cours/2A/IMA/IM05/IM05 Mosca Noé/final/runs/20261104-151517_final_model
+15:18:39 INFO final_model: nested CV: accuracy 0.966 ± 0.011, balanced 0.966, macro-F1 0.966; alpha=0.5 (33/50)
+15:18:40 INFO final_model: patients misclassified in at least one repeat: 9 (always: 1)
+15:22:10 INFO final_model: final fit on 100 patients, chosen params: {'alpha': 0.5}
+15:22:10 INFO final_model: test predictions per class: {'NOR': 12, 'MINF': 8, 'DCM': 11, 'HCM': 9, 'ARV': 10}

@@ -1,0 +1,16 @@
+{
+  "status": "ok",
+  "seconds": 41.6,
+  "lv_source_shift": [
+    {
+      "lv_source": "fill",
+      "patients_changed": 7,
+      "max_rel_change": 0.9848942598187306
+    },
+    {
+      "lv_source": "fill_hull",
+      "patients_changed": 7,
+      "max_rel_change": 0.3749306429246496
+    }
+  ]
+}

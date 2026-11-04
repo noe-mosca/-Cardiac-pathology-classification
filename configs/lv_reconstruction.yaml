@@ -1,0 +1,8 @@
+# LV cavity reconstruction methods compared on the training set (scripts/02_lv_reconstruction.py).
+# fill = holes of the myocardium, per slice; fill_hull = convex-hull fallback on open rings.
+name: lv_reconstruction
+methods:
+  - {method: fill}
+  - {method: fill_hull, min_hull_fraction: 0.0}
+  - {method: fill_hull, min_hull_fraction: 0.25}
+  - {method: fill_hull, min_hull_fraction: 0.5}

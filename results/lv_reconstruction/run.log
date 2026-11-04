@@ -1,0 +1,6 @@
+00:55:22 INFO lv_reconstruction: run 20261102-005521_lv_reconstruction -> /Users/noe/Desktop/Télécom/Cours/2A/IMA/IM05/IM05 Mosca Noé/final/runs/20261102-005521_lv_reconstruction
+00:55:32 INFO lv_reconstruction: fill                         dice=0.9969 (min 0.832)  exact 193/200  |dV|max=28.7 mL  missed=7 spurious=0  |dEF| mean=0.57 max=12.82
+00:55:32 INFO lv_reconstruction: fill_hull[min_hull_fraction=0.0] dice=0.9995 (min 0.988)  exact 175/200  |dV|max=3.1 mL  missed=0 spurious=20  |dEF| mean=0.07 max=0.82
+00:55:32 INFO lv_reconstruction: fill_hull[min_hull_fraction=0.25] dice=0.9998 (min 0.990)  exact 193/200  |dV|max=3.1 mL  missed=0 spurious=0  |dEF| mean=0.03 max=0.82
+00:55:32 INFO lv_reconstruction: fill_hull[min_hull_fraction=0.5] dice=0.9998 (min 0.990)  exact 193/200  |dV|max=3.1 mL  missed=0 spurious=0  |dEF| mean=0.03 max=0.82
+00:55:39 INFO lv_reconstruction: test: slices added to fill by each method: {'test_extra_slices_fill': 0, 'test_extra_slices_fill_hull[min_hull_fraction=0.0]': 12, 'test_extra_slices_fill_hull[min_hull_fraction=0.25]': 0, 'test_extra_slices_fill_hull[min_hull_fraction=0.5]': 0}
