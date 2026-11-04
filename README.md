@@ -49,7 +49,7 @@ data/                   metaDataTrain/Test.csv (height, weight, label), SampleSu
 data/acdc/              the segmentations (not included, see below)
 results/<experiment>/   latest successful run of each experiment (tables, metrics, figures)
 results/runs.csv        history of all runs
-report/                 the report (PDF and LaTeX sources)
+Report.pdf              the report
 cache/, runs/           extracted features and full run folders (git-ignored)
 ```
 
@@ -93,6 +93,5 @@ segmentations contain an LV label, it is removed on load. `CARDIAC_META`, `CARDI
 
 ## Report
 
-[`report/report.pdf`](report/report.pdf): the report in ICLR format, with an appendix that gives
-every table. Its LaTeX sources are in `report/`, and its figures and tables are regenerated from
-`results/` by `report/regenerate_figures.py` and `report/regenerate_supplementary.py`.
+[`Report.pdf`](Report.pdf): the report in ICLR format, with an appendix that gives every table.
+Its figures and tables are generated from `results/`.
